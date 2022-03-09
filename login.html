@@ -5,20 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+<p id="text"></p>
+<p id="text2"></p>
 <script>
     let userName =prompt("Who's there ");
-    if (userName== 'Admin') {
-        let pass=prompt('Password?');
-        if (pass== 'TheMaster') {
-            alert('Welcome!');
-        } else if (pass == null) {
-            alert('Canceled.');
-        }else {
-        }alert('Wrong password');
-    }else if (userName==null) {
-        alert('Canceled');
-    }else  {
-        alert("I don't know you");
+    if (userName == 'Admin') {
+        document.getElementById('text').innerHTML='Welcome!';
+    } else if (userName == null) {
+        document.getElementById('text').innerHTML='Canceled!';
+    } else  {
+        document.getElementById('text').innerHTML="I don't know you!";
+    }
+     let pass =prompt('Password?');
+    if (pass == 'TheMaster') {
+        document.getElementById('text2').innerHTML='Welcome!';
+    } else if (pass == null) {
+        document.getElementById('text2').innerHTML='Canceled.';
+    } else {
+        document.getElementById('text2').innerHTML='Wrong password.';
     }
 </script>
 </body>
